@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T0YVHF7LWS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0YVHF7LWS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-T0YVHF7LWS');
-</script>
+    gtag('config', 'G-T0YVHF7LWS');
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -159,25 +159,57 @@
       text-decoration: underline;
     }
 
-    /* Links List Styling */
-    .other-sites ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 20px 0;
+    /* Domain List Styling */
+    .domain-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
     }
 
-    .other-sites li {
-      margin-bottom: 12px;
+    .domain-item {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .other-sites li a {
-      color: #0066cc;
+    .domain-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .domain-link {
       text-decoration: none;
-      transition: color 0.3s ease;
+      color: inherit;
+      padding: 20px;
+      display: block;
     }
 
-    .other-sites li a:hover {
-      color: #d6336c;
+    .domain-item h3 {
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .domain-item p {
+      font-size: 1.1em;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .domain-link:hover h3 {
+      color: #0066cc;
+    }
+
+    .domain-link:hover p {
+      color: #999;
+    }
+
+    .domain-item:active {
+      transform: scale(0.98);
     }
 
     /* Mobile Responsiveness */
@@ -197,6 +229,14 @@
       .cta-button {
         padding: 14px 28px;
         font-size: 1.1em;
+      }
+
+      .domain-list {
+        grid-template-columns: 1fr;
+      }
+
+      .domain-item {
+        margin: 10px;
       }
     }
   </style>
@@ -225,24 +265,104 @@
   <section class="other-sites highlight-box">
     <h2 class="section-title">Explore Our Premium Real Estate Domains</h2>
     <p>Discover a range of highly valuable <strong>real estate website domains</strong> that can take your business to the next level. Click to learn more or inquire about purchasing:</p>
-    <ul>
-      <li><a href="http://SantaBarbaraHomeHub.com" target="_blank">SantaBarbaraHomeHub.com — Santa Barbara Real Estate Deals</a></li>
-      <li><a href="http://StocktonHomeDeals.com" target="_blank">StocktonHomeDeals.com — Stockton Property Listings</a></li>
-      <li><a href="http://AustinRentBot.com" target="_blank">AustinRentBot.com — Austin Rental Listings</a></li>
-      <li><a href="http://AustinHomesAi.com" target="_blank">AustinHomesAI.com — Austin Homes Listings</a></li>
-      <li><a href="http://AustinPropertiesAi.com" target="_blank">AustinPropertiesAI.com — Austin Property Deals</a></li>
-      <li><a href="http://PhoenixHomeSpot.com" target="_blank">PhoenixHomeSpot.com — Phoenix Homes for Sale</a></li>
-      <li><a href="http://TampaHomeDeals.com" target="_blank">TampaHomeDeals.com — Tampa Real Estate</a></li>
-      <li><a href="http://SaltLakeHomeHub.com" target="_blank">SaltLakeHomeHub.com — Salt Lake Real Estate</a></li>
-      <li><a href="http://PrincetonTXHomes.com" target="_blank">PrincetonTXHomes.com — Princeton TX Property</a></li>
-      <li><a href="http://PrincetonTexasHomes.com" target="_blank">PrincetonTexasHomes.com — Princeton Texas Property</a></li>
-      <li><a href="http://CostaMesaHomeDeals.com" target="_blank">CostaMesaHomeDeals.com — Costa Mesa Listings</a></li>
-      <li><a href="http://BakersfieldHomeHub.com" target="_blank">BakersfieldHomeHub.com — Bakersfield Real Estate</a></li>
-      <li><a href="http://IrvinePropertiesAI.com" target="_blank">IrvinePropertiesAI.com — Irvine Property Hub</a></li>
-      <li><a href="http://PasadenaHomeDeals.com" target="_blank">PasadenaHomeDeals.com — Pasadena Listings</a></li>
-      <li><a href="http://LisbonHomeHub.com" target="_blank">LisbonHomeHub.com — Lisbon Property Deals</a></li>
-      <li><a href="http://CapeTownHomeHub.com" target="_blank">CapeTownHomeHub.com — Cape Town Properties</a></li>
-    </ul>
+    <div class="domain-list">
+      <div class="domain-item">
+        <a href="http://SantaBarbaraHomeHub.com" target="_blank" class="domain-link">
+          <h3>SantaBarbaraHomeHub.com</h3>
+          <p>Santa Barbara Real Estate Deals</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://StocktonHomeDeals.com" target="_blank" class="domain-link">
+          <h3>StocktonHomeDeals.com</h3>
+          <p>Stockton Property Listings</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://AustinRentBot.com" target="_blank" class="domain-link">
+          <h3>AustinRentBot.com</h3>
+          <p>Austin Rental Listings</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://AustinHomesAi.com" target="_blank" class="domain-link">
+          <h3>AustinHomesAI.com</h3>
+          <p>Austin Homes Listings</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://AustinPropertiesAi.com" target="_blank" class="domain-link">
+          <h3>AustinPropertiesAI.com</h3>
+          <p>Austin Property Deals</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://PhoenixHomeSpot.com" target="_blank" class="domain-link">
+          <h3>PhoenixHomeSpot.com</h3>
+          <p>Phoenix Homes for Sale</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://TampaHomeDeals.com" target="_blank" class="domain-link">
+          <h3>TampaHomeDeals.com</h3>
+          <p>Tampa Real Estate</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://SaltLakeHomeHub.com" target="_blank" class="domain-link">
+          <h3>SaltLakeHomeHub.com</h3>
+          <p>Salt Lake Real Estate</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://PrincetonTXHomes.com" target="_blank" class="domain-link">
+          <h3>PrincetonTXHomes.com</h3>
+          <p>Princeton TX Property</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://PrincetonTexasHomes.com" target="_blank" class="domain-link">
+          <h3>PrincetonTexasHomes.com</h3>
+          <p>Princeton Texas Property</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://CostaMesaHomeDeals.com" target="_blank" class="domain-link">
+          <h3>CostaMesaHomeDeals.com</h3>
+          <p>Costa Mesa Listings</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://BakersfieldHomeHub.com" target="_blank" class="domain-link">
+          <h3>BakersfieldHomeHub.com</h3>
+          <p>Bakersfield Real Estate</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://IrvinePropertiesAI.com" target="_blank" class="domain-link">
+          <h3>IrvinePropertiesAI.com</h3>
+          <p>Irvine Property Hub</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://PasadenaHomeDeals.com" target="_blank" class="domain-link">
+          <h3>PasadenaHomeDeals.com</h3>
+          <p>Pasadena Listings</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://LisbonHomeHub.com" target="_blank" class="domain-link">
+          <h3>LisbonHomeHub.com</h3>
+          <p>Lisbon Property Deals</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://CapeTownHomeHub.com" target="_blank" class="domain-link">
+          <h3>CapeTownHomeHub.com</h3>
+          <p>Cape Town Properties</p>
+        </a>
+      </div>
+    </div>
   </section>
 
   <footer>
