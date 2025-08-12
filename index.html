@@ -364,72 +364,86 @@
     <h2 class="section-title" style="color: #e2e8f0;">Frequently Asked Questions</h2>
     <div class="faq-container">
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">What makes your domains different from standard real estate domains?</div>
+        <h3 class="faq-question">Do you offer AI domains for tech companies and startups?</h3>
         <div class="faq-answer">
-          <p>Our domains come with established traffic and are selected for their premium brandability. Each domain represents high-value city markets with proven search volume and commercial intent. We focus on domains that already attract organic visitors searching for real estate services.</p>
+          <p>Yes! We offer premium AI domain opportunities perfect for AI startups, machine learning companies, and automation services. These domains are strategically chosen for their SEO potential and alignment with AI trends, providing the ideal digital foundation for your tech venture.</p>
         </div>
       </div>
-
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">How do you determine domain pricing?</div>
+        <h3 class="faq-question">What makes these real estate domains valuable for agents and investors?</h3>
         <div class="faq-answer">
-          <p>Domain pricing is based on multiple factors including current traffic metrics, keyword search volume, commercial value of the geographic market, brandability, and long-term investment potential. Each domain is individually assessed to ensure fair market value.</p>
+          <p>Our real estate domains are carefully selected based on location relevance, search volume, and brandability. Each domain represents a prime digital real estate opportunity with existing organic traffic, local market recognition, and SEO advantages that can immediately boost your online presence and lead generation capabilities.</p>
         </div>
       </div>
-
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">Can I lease a domain before purchasing?</div>
+        <h3 class="faq-question">How do I lease a domain from your portfolio?</h3>
         <div class="faq-answer">
-          <p>Yes! We offer flexible leasing options for qualified buyers. This allows you to test the domain's performance for your business before making a full purchase commitment. Contact us to discuss lease-to-own arrangements.</p>
+          <p>Simply contact us via email at caly.h2727@gmail.com with your domain interest. We offer flexible leasing options including monthly and annual lease agreements with revenue sharing partnerships. Each domain comes with traffic analytics, SEO metrics, and setup assistance to ensure a smooth transition to your leasing arrangement.</p>
         </div>
       </div>
-
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">Do you provide traffic and analytics data for domains?</div>
+        <h3 class="faq-question">Do these domains come with existing traffic and SEO benefits?</h3>
         <div class="faq-answer">
-          <p>Absolutely. For serious inquiries, we provide comprehensive traffic analytics including visitor counts, search keyword data, geographic traffic sources, and conversion metrics. This data helps you make informed investment decisions.</p>
+          <p>Yes! Most of our premium domains already receive monthly organic traffic from users searching for real estate services in their respective markets. This means immediate visibility and potential lead generation from day one, giving you a significant advantage over starting with a brand new domain.</p>
         </div>
       </div>
-
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">What support do you offer after domain purchase?</div>
+        <h3 class="faq-question">What happens after I lease a domain?</h3>
         <div class="faq-answer">
-          <p>We provide complete domain transfer assistance, basic SEO recommendations, and can connect you with trusted web development partners. Our goal is to ensure you maximize your domain investment from day one.</p>
+          <p>After leasing, we immediately redirect all existing domain traffic to your website, social media profiles, or any URL you choose. This gives you instant access to the domain's established visitor flow and potential leads. You can change your redirect destination anytime during your lease, and we provide ongoing traffic analytics so you can track your results.</p>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2024 CityDomainPro.com. All rights reserved. | <a href="mailto:caly.h2727@gmail.com">Contact Carlos</a></p>
+    <p>&copy; 2024 CityDomainPro.com - Premium Real Estate & AI Domain Marketplace | <a href="mailto:caly.h2727@gmail.com">Contact: caly.h2727@gmail.com</a></p>
   </footer>
 
   <script>
     // Category button functionality
     document.addEventListener('DOMContentLoaded', function() {
-      const buttons = document.querySelectorAll('.category-button');
-      const groups = document.querySelectorAll('.domain-group');
+      const categoryButtons = document.querySelectorAll('.category-button');
+      const domainGroups = document.querySelectorAll('.domain-group');
 
-      buttons.forEach(button => {
+      categoryButtons.forEach(button => {
         button.addEventListener('click', function() {
-          const target = this.getAttribute('data-target');
+          const targetId = this.getAttribute('data-target');
+          const targetGroup = document.getElementById(targetId);
+          const isOpen = targetGroup.classList.contains('active');
           
-          // Remove active class from all buttons and groups
-          buttons.forEach(btn => btn.classList.remove('active'));
-          groups.forEach(group => group.classList.remove('active'));
+          // Close all lists and reset all buttons
+          domainGroups.forEach(group => group.classList.remove('active'));
+          categoryButtons.forEach(btn => btn.classList.remove('active'));
           
-          // Add active class to clicked button and corresponding group
-          this.classList.add('active');
-          document.getElementById(target).classList.add('active');
+          // If this list wasn't open, open it
+          if (!isOpen) {
+            targetGroup.classList.add('active');
+            this.classList.add('active');
+          }
+        });
+      });
+
+      // FAQ functionality
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+          const answer = this.nextElementSibling;
+          const isActive = answer.classList.contains('active');
+          
+          // Close all FAQ answers
+          document.querySelectorAll('.faq-answer').forEach(faqAnswer => {
+            faqAnswer.classList.remove('active');
+          });
+          
+          // Toggle the clicked answer
+          if (!isActive) {
+            answer.classList.add('active');
+          }
         });
       });
     });
-
-    // FAQ toggle functionality
-    function toggleAnswer(element) {
-      const answer = element.nextElementSibling;
-      answer.classList.toggle('active');
-    }
   </script>
 </body>
 </html>
